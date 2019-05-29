@@ -35,17 +35,3 @@ void Test_any_multiple_of_5_are_translated_to_Buzz(CuTest* tc)
 
 	CuAssertStrEquals(tc, expected, actual);
 }
-
-/*-------------------------------------------------------------------------*
- * main
- *-------------------------------------------------------------------------*/
-
-CuSuite* CuGetSuite_FizzBuzzTest(void)
-{
-	CuSuite* suite = CuSuiteNew();
-
-	SUITE_ADD_TEST(suite, Test_Multiples_of_3_are_translated_to_Fizz);
-	SUITE_ADD_TEST(suite, Test_Multiples_of_5_are_translated_to_Buzz);
-
-	return suite;
-}

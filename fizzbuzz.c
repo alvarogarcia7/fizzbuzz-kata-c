@@ -4,5 +4,5 @@
 
 char* FizzBuzz(int number)
 {
-    return "";
+    return "Fizz";
 }

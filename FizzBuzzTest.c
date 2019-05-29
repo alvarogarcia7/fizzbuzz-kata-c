@@ -27,6 +27,15 @@ void Test_Multiples_of_5_are_translated_to_Buzz(CuTest* tc)
 	CuAssertStrEquals(tc, expected, actual);
 }
 
+void Test_any_multiple_of_5_are_translated_to_Buzz(CuTest* tc)
+{
+
+    const char* expected = "Buzz";
+    const char* actual = FizzBuzz(10);
+
+	CuAssertStrEquals(tc, expected, actual);
+}
+
 /*-------------------------------------------------------------------------*
  * main
  *-------------------------------------------------------------------------*/

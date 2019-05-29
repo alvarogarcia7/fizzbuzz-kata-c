@@ -1,6 +1,7 @@
 #include <string.h>
 
 #include "fizzbuzz.h"
+#include "itoa.h"
 
 char* FizzBuzz(int number)
 {
@@ -14,11 +15,7 @@ char* FizzBuzz(int number)
         return "Fizz";    
     }
 
-    if(2 == number)
-    {
-        return "2";
-    }
-
-    return "Fizz";
-    
+    char *buffer;
+    itoa(number, buffer);
+    return buffer;
 }

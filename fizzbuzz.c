@@ -9,11 +9,16 @@ char* FizzBuzz(int number)
         return "Buzz";    
     }
 
+    if(number % 3 == 0)
+    {
+        return "Fizz";    
+    }
+
     if(2 == number)
     {
         return "2";
     }
-    
+
     return "Fizz";
     
 }

@@ -44,3 +44,12 @@ void Test_any_multiple_of_5_are_translated_to_Buzz(CuTest* tc)
 
 	CuAssertStrEquals(tc, expected, actual);
 }
+
+void Test_number_not_multiple_is_turned_into_its_own_string(CuTest* tc)
+{
+
+    const char* expected = "2";
+    const char* actual = FizzBuzz(2);
+
+	CuAssertStrEquals(tc, expected, actual);
+}

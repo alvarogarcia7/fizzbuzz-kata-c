@@ -64,3 +64,14 @@ void Test_any_number_not_multiple_is_turned_into_its_own_string(CuTest* tc)
 
     free(actual);
 }
+
+void Test_any_number_not_multiple_is_turned_into_its_own_string_case_2(CuTest* tc)
+{
+
+    const char* expected = "2";
+    char* actual = FizzBuzz(2);
+
+    CuAssertStrEquals(tc, expected, actual);
+
+    free(actual);
+}

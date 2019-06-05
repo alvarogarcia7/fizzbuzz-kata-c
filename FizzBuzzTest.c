@@ -97,3 +97,15 @@ void Test_return_all_fizzBuzz_translations_from_1_to_3 (CuTest* tc)
 
     free(actual);
 }
+
+void Test_return_all_fizzBuzz_translations_from_4_6 (CuTest* tc) 
+{
+    const char* expected[] = { "4", "Buzz", "Fizz"};
+    char** actual = FizzBuzzRange(4, 6);
+
+    for (int i = 0; i < sizeof(expected)/sizeof(char*); i++) {
+        CuAssertStrEquals(tc, expected[i], actual[i]);
+    }
+
+    free(actual);
+}

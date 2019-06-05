@@ -24,3 +24,14 @@ char* FizzBuzz(int number)
     itoa(number, buffer);
     return buffer;
 }
+
+char** FizzBuzzRange(int from, int to)
+{
+    char** result = calloc(to-from+1, sizeof(char*));
+
+    for (int i = from; i <= to; i++){
+        result[i-from] = FizzBuzz(i);
+    }
+
+    return result;
+}

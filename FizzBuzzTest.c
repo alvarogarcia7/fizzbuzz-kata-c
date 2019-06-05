@@ -85,3 +85,15 @@ void Test_any_number_not_multiple_is_turned_into_its_own_string_case_2(CuTest* t
 
     free(actual);
 }
+
+void Test_return_all_fizzBuzz_translations_from_1_to_3 (CuTest* tc) 
+{
+    const char* expected[] = { "1", "2", "Fizz"};
+    char** actual = FizzBuzzRange(1, 3);
+
+    for (int i = 0; i < sizeof(expected)/sizeof(char*); i++) {
+        CuAssertStrEquals(tc, expected[i], actual[i]);
+    }
+
+    free(actual);
+}

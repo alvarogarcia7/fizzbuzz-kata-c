@@ -7,17 +7,20 @@
 
 char* FizzBuzz(int number)
 {
+    char* buffer = calloc(4, sizeof(char));
+
     if(number % 5 == 0)
     {
-        return "Buzz";    
+        strcpy(buffer, "Buzz");
+        return buffer;    
     }
 
     if(number % 3 == 0)
     {
-        return "Fizz";    
+        strcpy(buffer, "Fizz");    
+        return buffer;
     }
 
-    char* buffer = malloc(sizeof(char)*3);
     itoa(number, buffer);
     return buffer;
 }

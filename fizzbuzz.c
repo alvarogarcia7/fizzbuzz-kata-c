@@ -1,5 +1,6 @@
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "fizzbuzz.h"
 #include "itoa.h"
@@ -16,7 +17,7 @@ char* FizzBuzz(int number)
         return "Fizz";    
     }
 
-    static char buffer[2];
+    char* buffer = malloc(sizeof(char)*3);
     itoa(number, buffer);
     return buffer;
 }

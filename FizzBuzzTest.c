@@ -58,7 +58,9 @@ void Test_any_number_not_multiple_is_turned_into_its_own_string(CuTest* tc)
 {
 
     const char* expected = "1";
-    const char* actual = FizzBuzz(1);
+    char* actual = FizzBuzz(1);
 
 	CuAssertStrEquals(tc, expected, actual);
+
+    free(actual);
 }

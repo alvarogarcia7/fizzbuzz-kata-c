@@ -95,6 +95,9 @@ void Test_return_all_fizzBuzz_translations_from_1_to_3 (CuTest* tc)
         CuAssertStrEquals(tc, expected[i], actual[i]);
     }
 
+    for (int i = 0; i < sizeof(expected)/sizeof(char*); i++) {
+        free(actual[i]);
+    }
     free(actual);
 }
 
@@ -107,5 +110,8 @@ void Test_return_all_fizzBuzz_translations_from_4_6 (CuTest* tc)
         CuAssertStrEquals(tc, expected[i], actual[i]);
     }
 
+    for (int i = 0; i < sizeof(expected)/sizeof(char*); i++) {
+        free(actual[i]);
+    }
     free(actual);
 }
